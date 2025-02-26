@@ -1,5 +1,5 @@
 # Mad Map
-Mad Map is a UW-Madison campus navigation system developed using a custom A* ([A Star](https://en.wikipedia.org/wiki/A*_search_algorithm)) pathfinding algorithm. Mad Map returns the quickest walkable route between any two points on campus. This is an adapted and expanded version of the A* algorithm I originally implemented in Swift that plotted paths to avoid obstacles on a 2D grid, which can be found [here](https://github.com/EvanC8/A-Star-Maze).
+Mad Map is a UW-Madison campus navigation system developed using a custom A* ([A Star](https://en.wikipedia.org/wiki/A*_search_algorithm)) pathfinding algorithm. Mad Map returns the quickest walkable route between any two points on campus. This is an adapted and expanded version of the A* algorithm I originally implemented in Swift to plot obstacle avoiding paths on a 2D grid, which can be found [here](https://github.com/EvanC8/A-Star-Maze).
 
 <img src="https://github.com/EvanC8/Mad-Map/blob/main/CampusPlot.png?raw=true" height="300">
 
