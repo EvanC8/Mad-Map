@@ -35,17 +35,21 @@ Mad Map is a UW-Madison campus navigation system developed using a custom A* ([A
 4. Watch Mad Map show you the quickest path being two random spots on campus!
 
 # How it works
-<img src="https://github.com/EvanC8/Mad-Map/blob/main/RouteExample.png?raw=true" height="300">
+<img src="https://github.com/EvanC8/Mad-Map/blob/main/RouteExample1.png?raw=true" height="200">
 
 ### Dataset
-The program utilizes the `K-Means++ clustering algorithm` to determine a specified number of dominate colors within the image to use as a palette to then quantize the image. 
+The data on UW-Madison was retrieved using [OSMnx](https://osmnx.readthedocs.io/en/stable/), a python library for accessing street networks. Streets (edges) and intersections (nodes) were parsed and divided into seperate csv files for easy access and retrieval  of only the neccesarry details on roads. The data stored in each of these files is below:
+
+| CSV File | Data |
+|------------|-------|
+| Streets (edges) | ID, Intersection 1 ID, Intersection 2 ID, Length (meters), Name, Oneway? |
+| Intersections (nodes) | ID, Latitude, Longitude, Intersecting street IDs |
 
 ### A* Pathfinding
-The program utilizes the `K-Means++ clustering algorithm` to determine a specified number of dominate colors within the image to use as a palette to then quantize the image. 
+[A* pathfinding](https://en.wikipedia.org/wiki/A*_search_algorithm) efficiently finds the shortest path between two nodes by considering both the distance traveled so far (g(n)) and an estimated cost to the goal (h(n)). It prioritizes paths with the lowest total estimated cost (f(n) = g(n) + h(n)), allowing it to focus on the most promising routes that will reduce travel distance and time. This implementation of A* utilizes a min heap priority queue data structure to efficiently track and explore the most promising paths.
 
 ### Visualization
-The program utilizes the `K-Means++ clustering algorithm` to determine a specified number of dominate colors within the image to use as a palette to then quantize the image. 
-
+Once a route is found by the algorithm, it is plotted over a map of UW-Madison's campus using the library [NetworkX](https://networkx.org/).
 
 # Next Steps
 * Mad Map is currently being implemented as the foundation of an application being developed by a group of UW-Madison students. Stay tuned!
