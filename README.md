@@ -40,13 +40,15 @@ Mad Map is a UW-Madison campus navigation system developed using a custom A* ([A
 ### Dataset
 The data on UW-Madison was retrieved using [OSMnx](https://osmnx.readthedocs.io/en/stable/), a python library for accessing street networks. Streets (edges) and intersections (nodes) were parsed and divided into seperate csv files for easy access and retrieval  of only the neccesarry details on roads. The data stored in each of these files is below:
 
-| CSV File | Data |
+| Category | Data |
 |------------|-------|
 | Streets (edges) | ID, Intersection 1 ID, Intersection 2 ID, Length (meters), Name, Oneway? |
 | Intersections (nodes) | ID, Latitude, Longitude, Intersecting street IDs |
 
 ### A* Pathfinding
 [A* pathfinding](https://en.wikipedia.org/wiki/A*_search_algorithm) efficiently finds the shortest path between two nodes by considering both the distance traveled so far (g(n)) and an estimated cost to the goal (h(n)). It prioritizes paths with the lowest total estimated cost (f(n) = g(n) + h(n)), allowing it to focus on the most promising routes that will reduce travel distance and time. This implementation of A* utilizes a min heap priority queue data structure to efficiently track and explore the most promising paths.
+
+
 
 ### Visualization
 Once a route is found, it is plotted over a map of UW-Madison's campus using the library [NetworkX](https://networkx.org/).
