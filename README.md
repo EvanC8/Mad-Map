@@ -46,7 +46,7 @@ The data on UW-Madison was retrieved using [OSMnx](https://osmnx.readthedocs.io/
 | Intersections (nodes) | ID, Latitude, Longitude, Intersecting street IDs |
 
 ### A* Pathfinding
-[A* pathfinding](https://en.wikipedia.org/wiki/A*_search_algorithm) efficiently finds the shortest path between two nodes by considering both the distance traveled so far (g(n)) and an estimated distance remaining to the goal destination (h(n)). It prioritizes paths with the lowest total estimated cost (f(n) = g(n) + h(n)), allowing it to focus on the most promising routes that will reduce travel distance and time. This implementation of A* utilizes a min heap priority queue data structure to efficiently track and explore the most promising paths.
+[A* pathfinding](https://en.wikipedia.org/wiki/A*_search_algorithm) efficiently finds the shortest path between two nodes by considering both the distance traveled so far (g(n)) and the estimated distance remaining to the goal destination (h(n)). It prioritizes paths with the lowest total estimated cost (f(n) = g(n) + h(n)), allowing it to focus on the most promising routes that will reduce travel distance and time. This implementation of A* utilizes a min heap priority queue data structure to efficiently track and explore the most promising paths.
 
 <b>Total Estimated Cost</b>
 
